@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    background-color: #D6D1C5;
+}
+
+*::selection {
+    color: #D6D1C5;
+    background-color: black;
+}
+
+#main {
+    width: 100%;
+    background-color: #D6D1C5;
+}
+
+#home {
+    width: 100%;
+    min-height: 100vh;
+}
+
+#nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav {
+    display: flex;
+    width: 100%;
+    padding: 2vw 4vw;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+hr {
+    width: calc(100% - 100px);
+    height: 2px;
+    background-color: #706751;
+    border: none;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+#nav p {
+    height: inherit;
+    font-size: 4vw;
+    font-weight: bold;
+    color: #706751;
+    text-align: center;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+#nav2 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+#nav2 a {
+    width: 100px;
+    color: #706751;
+    font-size: 1.1vw;
+    font-weight: 600;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    gap: 40px;
+}
+
+#homemain {
+    display: flex;
+    padding: 0 10vw;
+    height: 100vh;
+}
+
+#homemain h1 {
+    position: relative;
+    width: 70%;
+    font-family: 'Caveat', cursive;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #706751;
+    margin-top: 10vh;
+}
+
+#homemain {
+    display: flex;
+    padding: 0 10vw;
+    height: 100vh;
+}
+
+#homemain h1 {
+    width: 80%;
+    font-family: 'Caveat', cursive;
+    font-size: 5vw;
+    font-weight: 400;
+    line-height: 3vw;
+    color: #706751;
+    margin-top: 10vh;
+}
+
+#homemain h1 span {
+    font-family: 'Caveat', cursive;
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-weight: 500;
+    letter-spacing: -4px;
+    color: black;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+#homemain img {
+    background-color: red;
+    width: 35%;
+    height: 70%;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 85px;
+}
+
+#maincontent {
+    font-size: 2vw;
+    padding: 4vw 15vw;
+}
