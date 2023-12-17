@@ -19,14 +19,14 @@ body {
 hr {
     width: calc(100% - 100px);
     height: 2px;
-    background-color:#D6D1C5;
+    background-color: #D6D1C5;
     border: none;
     margin: 10px 10px;
 }
 
 #main {
     width: 100%;
-    background-color:#D6D1C5;
+    background-color: #D6D1C5;
 }
 
 #home {
@@ -146,7 +146,7 @@ hr {
 }
 
 #homemain .left {
-    background-color: red;
+    /* background-color: red; */
     width: 25vw;
     height: 35vw;
     object-fit: cover;
@@ -154,7 +154,7 @@ hr {
     margin-top: 85px;
     margin-left: 70vw;
     margin-right: 5vw;
-    
+
 }
 
 #homemain .right {
@@ -164,7 +164,7 @@ hr {
     object-position: center;
     margin-right: 15vw;
     margin-top: -7vw;
-    
+
 }
 
 #homeimg {
@@ -198,17 +198,9 @@ hr {
 #page2 {
     display: flex;
     padding: 0 5vw;
+    height: 60vh;
     border-bottom: 1px solid #706751;
 }
-
-#page2 hr {
-    width: calc(100% - 100px);
-    height: 2px;
-    background-color: #706751;
-    border: none;
-    margin-bottom: 10px;
-}
-
 
 #page2 #about h1 {
     width: 20vw;
@@ -226,25 +218,173 @@ hr {
     font-weight: 400;
     color: black;
     margin-top: 7vh;
+    letter-spacing: -6px;
     text-transform: uppercase;
+}
+
+#page2 #aboutcontent {
+    position: relative;
+    width: 100%;
+    margin-bottom: 9vh;
 }
 
 #page2 #aboutcontent h1 {
     font-size: 2vw;
-    font-weight: 60;
+    font-weight: 70;
     padding: 0 1vw;
     margin-top: 7vh;
     margin-left: 20vw;
-    margin-bottom: 2px;
     color: #706751;
 }
 
 #page2 #aboutcontent a {
+    position: absolute;
+    align-items: center;
+    justify-self: center;
+    margin-top: 5vh;
+    margin-left: 21vw;
     text-decoration: none;
-    margin-top: auto;
-    font-size: 2vw;
-    margin-left: 25vw;
-    padding: 10px 2.5vw;
+    font-size: 1.8vw;
+    padding: 0.5vw 3vw;
+    border: 3px solid #000000;
+    border-radius: 70px;
+    font-weight: 600;
+    color: #000;
+    background-color: #D6D1C5;
+}
+
+.download {
+    height: 25px;
+    width: 35px;
+    margin-left: 4px;
+    margin-top: 15px;
+}
+
+.download:hover {
+    filter: invert(100%);
+}
+
+#page2 #aboutcontent a:hover {
+    background-color: black;
+    color: #D6D1C5;
+}
+
+#page3 {
+    display: flex;
+    padding: 0 5vw;
+    height: 40vh;
+    border-bottom: 1px solid #706751;
+}
+
+#page3 #skills h1 {
+    width: 25vw;
+    font-family: 'Caveat', cursive;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #706751;
+    margin-top: 7vh;
+}
+
+#page3 #skills span {
+    font-family: 'Caveat', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5vw;
+    font-weight: 400;
+    color: black;
+    margin-top: 7vh;
+    letter-spacing: -6px;
+    text-transform: uppercase;
+}
+
+#page3 #skillscontent {
+    margin-left: 12vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+#page3 #skillscontent a {
+    margin-left: 1vw;
+    width: 70px;
+    background-color: #D6D1C5;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+#page3 #skillscontent img {
+    color: #D6D1C5;
+    width: 70px;
+    height: 70px;
+    filter: saturate(3);
+}
+
+#page4 {
+    padding: 0 5vw;
+    border-bottom: 1px solid #706751;
+}
+
+#page4 #projects h1 {
+    width: 35vw;
+    font-family: 'Caveat', cursive;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #706751;
+    margin-top: 7vh;
+}
+
+#page4 #projects span {
+    font-family: 'Caveat', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5vw;
+    font-weight: 400;
+    color: black;
+    margin-top: 7vh;
+    /* letter-spacing: -6px; */
+    text-transform: uppercase;
+}
+
+#work {
+    display: flex;
+    flex-direction: column; 
+    margin-top: 4vh;
+}
+
+#work h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 3vw;
+    font-weight: 400;
+    color: #706751;
+}
+
+#work span {
+    font-family: 'Caveat', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 3vw;
+    font-weight: 400;
+    color: black;
+    /* letter-spacing: -2px; */
+    text-transform: uppercase;
+}
+
+#work .workcontent {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    align-items: center;
+    margin-top: 5vh;
+    padding: 2vw 0;
+    border-bottom: 2px solid #706751;
+}
+
+.page4btn {
+    margin-left: auto; /* Push the button to the right */
+}
+
+.page4btn a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    padding: 0.5vw 3vw;
     border: 2px solid #000000;
     border-radius: 70px;
     font-weight: 500;
@@ -252,8 +392,31 @@ hr {
     background-color: #D6D1C5;
 }
 
-#page3{
-    background-color: #D6D1C5;
+.page4btn a:hover {
+    background-color: black;
+    color: #D6D1C5;
+}
+
+.workbtn {
     display: flex;
-    padding: 0 5vw;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vw; 
+    margin-bottom: 3vw; 
+}
+
+#page4 .workbtn a {
+    text-decoration: none;
+    font-size: 1.8vw;
+    padding: 0.5vw 3vw;
+    border: 3px solid #000000;
+    border-radius: 70px;
+    font-weight: 600;
+    color: #000;
+    background-color: #D6D1C5;
+}
+
+#page4 .workbtn a:hover {
+    background-color: black;
+    color: #D6D1C5;
 }
