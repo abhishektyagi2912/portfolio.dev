@@ -78,15 +78,35 @@ hr {
 }
 
 #nav2 a {
-    width: 100px;
     color: #706751;
     font-size: 1.1vw;
     font-weight: 600;
     position: relative;
     text-decoration: none;
     text-transform: uppercase;
-    gap: 40px;
+    transition: color 0.3s ease;
 }
+
+#nav2 a:hover {
+    color: black;
+}
+
+#nav2 a:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+#nav2 a:hover:after {
+    width: 100%;
+}
+
 
 #homemain {
     display: flex;
@@ -222,9 +242,15 @@ hr {
     text-transform: uppercase;
 }
 
+#aboutcontainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2vw;
+}
+
 #page2 #aboutcontent {
-    position: relative;
-    width: 100%;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 9vh;
 }
 
@@ -237,8 +263,7 @@ hr {
     color: #706751;
 }
 
-#page2 #aboutcontent a {
-    position: absolute;
+#page2 #aboutbtn a {
     align-items: center;
     justify-self: center;
     margin-top: 5vh;
@@ -264,7 +289,7 @@ hr {
     filter: invert(100%);
 }
 
-#page2 #aboutcontent a:hover {
+#page2 #aboutcontainer a:hover {
     background-color: black;
     color: #D6D1C5;
 }
@@ -322,7 +347,6 @@ hr {
 
 #page4 {
     padding: 0 5vw;
-    border-bottom: 1px solid #706751;
 }
 
 #page4 #projects h1 {
@@ -347,7 +371,7 @@ hr {
 
 #work {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     margin-top: 4vh;
 }
 
@@ -370,7 +394,7 @@ hr {
 
 #work .workcontent {
     display: flex;
-    justify-content: space-between; /* Distribute items evenly */
+    justify-content: space-between;
     align-items: center;
     margin-top: 5vh;
     padding: 2vw 0;
@@ -378,7 +402,7 @@ hr {
 }
 
 .page4btn {
-    margin-left: auto; /* Push the button to the right */
+    margin-left: auto;
 }
 
 .page4btn a {
@@ -401,8 +425,8 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 3vw; 
-    margin-bottom: 3vw; 
+    margin-top: 5vw;
+    margin-bottom: 5vw;
 }
 
 #page4 .workbtn a {
@@ -420,3 +444,153 @@ hr {
     background-color: black;
     color: #D6D1C5;
 }
+
+#page5 {
+    padding: 0 5vw;
+    margin-top: 2vh;
+    border-bottom: 1px solid #706751;
+}
+
+#page5 #education {
+    display: flex;
+}
+
+#page5 #education h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 5vw;
+    font-weight: 400;
+    color: #706751;
+    text-align: center;
+    margin-top: 4vh;
+}
+
+#page5 #education span {
+    font-family: 'Caveat', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 5vw;
+    font-weight: 400;
+    color: black;
+    letter-spacing: -4px;
+    text-transform: uppercase;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 4vw;
+    margin-left: 15vw;
+    margin-bottom: 2vw;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2vw;
+    position: relative;
+}
+
+.date {
+    font-family: 'Caveat', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vw;
+    font-weight: 600;
+    color: #706751;
+    margin-right: 20px;
+}
+
+.description {
+    max-width: 500px;
+}
+
+.description h2 {
+    font-family: 'Caveat', cursive;
+    font-size: 3vw;
+    font-weight: 400;
+    color: #706751;
+}
+
+.description p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.8vw;
+    color: black;
+}
+
+#page6 {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+    padding: 0 5vw;
+    background-color: #EDA734;
+}
+
+#connectcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5vh;
+    height: 80vh;
+    border-bottom: 2px solid #000;
+}
+
+#page6 #connect h1 {
+    font-family: 'Caveat', cursive;
+    font-size: 10vw; 
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin-top: 15vh;
+}
+
+#page6 #connect h2 {
+    font-family: 'Caveat', cursive;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 6vw; 
+    font-weight: 400;
+    color: #fff;
+    letter-spacing: -2px; 
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 15vh;
+}
+
+#connectbtn a {
+    text-decoration: none;
+    font-size: 2vw; 
+    padding: 0.8vw 4vw; 
+    border: 3px solid #000000;
+    border-radius: 70px;
+    font-weight: 600;
+    color: #D6D1C5;
+    background-color: #000;
+    margin-bottom: 18vh;
+}
+
+#page7 {
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 0.9;
+    padding: 0 5vw;
+    background-color: #EDA734;
+}
+
+#social {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+}
+
+#social a {
+    text-decoration: none;
+    font-size: 1vw; 
+    padding: 0.8vw 4vw; 
+    border: 3px solid #000000;
+    text-transform: capitalize;
+    border-radius: 70px;
+    font-weight: 600;
+    color: #000;
+}
+
