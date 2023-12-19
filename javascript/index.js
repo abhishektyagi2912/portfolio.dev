@@ -120,7 +120,7 @@ document.querySelectorAll(".workcontent").forEach(function (elem) {
             ease: Power3,
             duration: 0.5,
             top: diff,
-            left: details.clientX,
+            left: details.clientX - elem.getBoundingClientRect().left,
             rotate: gsap.utils.clamp(-20, 20, difference * 0.5),
         })
     });
