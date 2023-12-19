@@ -81,6 +81,62 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.querySelectorAll(".workcontent").forEach(function (elem) {
+    var rotate = 0;
+    var difference = 0;
+
+    elem.addEventListener("mouseleave", function (details) {
+
+        gsap.to(elem.querySelector("img"), {
+            opacity: 0,
+            ease: Power3,
+        })
+    });
+
+    elem.addEventListener("mousemove", function (details) {
+
+        difference = details.clientX - rotate;    //------------------->   it finds the difference between the current mouse position and the previous mouse position
+        rotate = details.clientX;                 //------------------->   it finds the current mouse position  
+
+        // and we want that if we move cursor fast then it do not rotate fully we want that it rotate only  20% of the total difference then we use 
+        // the following code
+
+        // gsap.utils.clamp(-20, 20, difference);    //------------------->   it clamps the value between -20 and 20
+
+
+        // it finds the mouse position relative to the element like how much it is far from the top and left of the div 
+        // console.log(details.clientY - elem.getBoundingClientRect().top);
+
+        var page4Btn = document.querySelector(".workbtn");
+        var isOverPage4Btn = isMouseOverElement(details, page4Btn);
+
+        if (isOverPage4Btn) {
+            return; // Stop the animation if the mouse is over the "page4btn" button
+        }
+
+        var diff = details.clientY - elem.getBoundingClientRect().top;
+        gsap.to(elem.querySelector("img"), {
+            opacity: 1,
+            ease: Power3,
+            duration: 0.5,
+            top: diff,
+            left: details.clientX,
+            rotate: gsap.utils.clamp(-20, 20, difference * 0.5),
+        })
+    });
+
+
+});
+function isMouseOverElement(event, element) {
+    var rect = element.getBoundingClientRect();
+    return (
+        event.clientX >= rect.left &&
+        event.clientX <= rect.right &&
+        event.clientY >= rect.top &&
+        event.clientY <= rect.bottom
+    );
+}
+
 function sendEmail() {
     window.location.href = "mailto:your-abhishekpersonal2912@gmail.com?subject=I%20want%20to%20work%20with%20you";
 }
