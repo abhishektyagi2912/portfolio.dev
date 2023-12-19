@@ -1,11 +1,5 @@
 Shery.mouseFollower();
 Shery.makeMagnet(".magnet");
-// const scroll = new LocomotiveScroll({
-//     el: document.querySelector('#main'),
-//     smooth: true
-// });
-
-// const scroll = new LocomotiveScroll();
 
 var tl = gsap.timeline()
 
@@ -63,5 +57,30 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+document.addEventListener('DOMContentLoaded', function () {
+    const scrollToTopButton = document.getElementById('scroll-to-top');
 
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+            scrollToTopButton.style.opacity = '1';
+            scrollToTopButton.style.pointerEvents = 'auto';
+        } else {
+            scrollToTopButton.style.opacity = '0';
+            scrollToTopButton.style.pointerEvents = 'none';
+        }
+    });
 
+    scrollToTopButton.addEventListener('click', function () {
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: '#home',
+                offsetY: 0,
+            },
+        });
+    });
+});
+
+function sendEmail() {
+    window.location.href = "mailto:your-abhishekpersonal2912@gmail.com?subject=I%20want%20to%20work%20with%20you";
+}
