@@ -94,6 +94,7 @@ document.querySelectorAll(".workcontent").forEach(function (elem) {
     });
 
     elem.addEventListener("mousemove", function (details) {
+        var isOverBtn = isOverPage4Btn(details, elem);
 
         difference = details.clientX - rotate;    //------------------->   it finds the difference between the current mouse position and the previous mouse position
         rotate = details.clientX;                 //------------------->   it finds the current mouse position  
@@ -106,27 +107,18 @@ document.querySelectorAll(".workcontent").forEach(function (elem) {
 
         // it finds the mouse position relative to the element like how much it is far from the top and left of the div 
         // console.log(details.clientY - elem.getBoundingClientRect().top);
-
-        var page4Btn = document.querySelector(".workbtn");
-        var isOverPage4Btn = isMouseOverElement(details, page4Btn);
-
-        if (isOverPage4Btn) {
-            return; // Stop the animation if the mouse is over the "page4btn" button
-        }
-
         var diff = details.clientY - elem.getBoundingClientRect().top;
         gsap.to(elem.querySelector("img"), {
-            opacity: 1,
-            ease: Power3,
+            opacity: isOverBtn ? 0 : 1,
+            ease: "power3",
             duration: 0.5,
             top: diff,
             left: details.clientX - elem.getBoundingClientRect().left,
             rotate: gsap.utils.clamp(-20, 20, difference * 0.5),
-        })
+        });
     });
-
-
 });
+
 function isMouseOverElement(event, element) {
     var rect = element.getBoundingClientRect();
     return (
@@ -135,6 +127,11 @@ function isMouseOverElement(event, element) {
         event.clientY >= rect.top &&
         event.clientY <= rect.bottom
     );
+}
+
+function isOverPage4Btn(details, elem) {
+    var page4Btn = elem.querySelector(".page4btn a");
+    return isMouseOverElement(details, page4Btn);
 }
 
 function sendEmail() {
