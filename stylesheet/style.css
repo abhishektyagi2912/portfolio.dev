@@ -289,19 +289,6 @@ hr {
     background-color: #D6D1C5;
 }
 
-/* btn image */
-
-/* .download {
-    height: 25px;
-    width: 35px;
-    margin-left: 0.1vw;
-    margin-top: 0.1vw;
-}
-
-.download:hover {
-    filter: invert(100%);
-} */
-
 #page2 #aboutcontainer a:hover {
     background-color: black;
     color: #D6D1C5;
@@ -654,15 +641,608 @@ hr {
         left: 0;
     }
 }
+@media screen and (max-width: 767px) {
+    #nav {
+        display: flex;
+        width: 100%;
+        padding: 2vw 4vw;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #nav i {
+        opacity: 0;
+    }
+    
+    #home hr {
+        width: calc(100% - 100px);
+        height: 2px;
+        background-color: #706751;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    #nav p {
+        height: inherit;
+        font-size: 6vw;
+        font-weight: bold;
+        color: #706751;
+        text-align: center;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+    
+    #nav2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+    }
+    
+    #nav2 a {
+        color: #706751;
+        font-size: 2.2vw;
+        font-weight: 600;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
 
+    #homemain {
+        position: relative;
+        padding: 0 5vw;
+        border-bottom: 1px solid #706751;
+    }
+
+    #homecontent {
+        margin-top: 10vw;
+    }
+
+    #homemain h1 {
+        font-family: 'Caveat', cursive;
+        font-size: 5vw;
+        font-weight: 400;
+        color: #706751;
+    }
+
+    #homemain h2 {
+        font-family: 'Caveat', cursive;
+        font-size: 5vw;
+        font-weight: 400;
+        margin-left: 5vw;
+        color: #706751;
+    }
+
+    #homemain h1 span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 5vw;
+        font-weight: 500;
+        letter-spacing: -1px;
+        color: black;
+    }
+
+    #homemain h2 span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 5vw;
+        font-weight: 500;
+        letter-spacing: -1px;
+        color: black;
+    }
+
+    #homemain h3 {
+        margin-top: 45vh;
+        font-size: 4vw;
+        width: 90%;
+        font-weight: 100;
+        margin-left: 5vw;
+        margin-bottom: 2vw;
+        color: #706751;
+    }
+
+    #homemain .right {
+        width: 10vw;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0;
+    }
+
+    #homemain .left {
+        /* background-color: red; */
+        width: 50vw;
+        height: 50vw;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 30vw;
+        margin-left: 20vw;
+    }
+
+    #anda {
+        position: absolute;
+        margin-top: -10vw;
+        margin-left: 10vw;
+    }
+
+    #anda a {
+        text-decoration: none;
+        font-family: 'Caveat', cursive;
+        font-size: 2vw;
+        font-weight: 400;
+        color: #706751;
+        margin-left: 55vw;
+        border: 2px solid #706751;
+        border-radius: 50%;
+        padding: 2vw 1vw;
+        display: inline-block;
+        text-align: center;
+    }
+
+    #homemain .btn {
+        text-decoration: none;
+        font-size: 3vw;
+        padding: 1.5vw 5vw;
+        border: 1px solid #706751;
+        border-radius: 70px;
+        font-weight: 100;
+        color: #f1eeeb;
+        background-color: #000;
+    }
+
+    #homemain .btn img.btnimage {
+        opacity: 0;
+    }
+
+    #page2 {
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid #706751;
+    }
+
+    #page2 #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #page2 #about h1 {
+        width: 30vw;
+        font-family: 'Caveat', cursive;
+        font-size: 6vw;
+        font-weight: 400;
+        color: #706751;
+    }
+
+    #page2 #about span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6vw;
+        font-weight: 400;
+        color: black;
+        margin-top: 7vh;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    #aboutcontainer {
+        width: 100%;
+        margin-bottom: 5vw;
+        text-align: start;
+    }
+
+    #page2 #aboutcontent {
+        margin-bottom: 5vh;
+    }
+
+    #aboutcontainer #aboutcontent h1 {
+        margin: 0;
+        margin-top: 5vh;
+        font-size: 4vw;
+        font-weight: 70;
+        color: #706751;
+    }
+
+    #aboutcontainer #aboutbtn a {
+        margin-left: 0;
+        margin-top: 5vh;
+        text-decoration: none;
+        font-size: 3vw;
+        padding: 0.5vw 3vw;
+        border: 1px solid #000000;
+        border-radius: 70px;
+        font-weight: 400;
+        color: #000;
+        background-color: #D6D1C5;
+    }
+
+    #page3 {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5vw;
+        height: auto;
+        border-bottom: 1px solid #706751;
+    }
+
+    #page3 #skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #page3 #skills h1 {
+        width: 30vw;
+        font-family: 'Caveat', cursive;
+        font-size: 6vw;
+        font-weight: 400;
+        color: #706751;
+        margin-top: 7vh;
+    }
+
+    #page3 #skills span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6vw;
+        font-weight: 400;
+        color: black;
+        margin-top: 7vh;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    #page3 #skillscontent {
+        margin: 0;
+        margin-top: 4vh;
+        margin-left: 0;
+        margin-left: 0.1vh;
+        margin-bottom: 1vh;
+        display: flex;
+        gap: 50px;
+    }
+
+    #page3 #skillscontent a {
+        margin: 0;
+        margin-right: 1vw;
+
+        width: 7vw;
+        background-color: #D6D1C5;
+        border-radius: 50%;
+    }
+
+    #page3 #skillscontent img {
+        color: #D6D1C5;
+        width: 60px;
+        height: 60px;
+        filter: saturate(3);
+    }
+
+    #page5 {
+        padding: 0 5vw;
+        margin-top: 2vh;
+        border-bottom: 1px solid #706751;
+    }
+
+    #page5 #education {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4vh;
+    }
+
+    #page5 #education h1 {
+        font-family: 'Caveat', cursive;
+        font-size: 6vw;
+        font-weight: 400;
+        color: #706751;
+        text-align: center;
+    }
+
+    #page5 #education span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6vw;
+        font-weight: 400;
+        color: black;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 4vw;
+        margin-left: 15vw;
+        margin-bottom: 2vw;
+    }
+
+    .event {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2vw;
+        position: relative;
+    }
+
+    .date {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 3.8vw;
+        font-weight: 500;
+        color: #706751;
+        margin-right: 20px;
+    }
+
+    .description {
+        max-width: 500px;
+    }
+
+    .description h2 {
+        font-family: 'Caveat', cursive;
+        font-size: 5vw;
+        font-weight: 400;
+        color: #706751;
+    }
+
+    .description p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.9vw;
+        color: black;
+    }
+
+    #page4 {
+        padding: 0 5vw;
+    }
+
+    #page4 #projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #page4 #projects h1 {
+        width: 35vw;
+        font-family: 'Caveat', cursive;
+        font-size: 6vw;
+        font-weight: 400;
+        color: #706751;
+        margin-top: 7vh;
+    }
+
+    #page4 #projects span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6vw;
+        font-weight: 400;
+        color: black;
+        margin-top: 7vh;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    #work {
+        display: flex;
+        margin-top: 4vh;
+    }
+
+    #work h1 {
+        font-family: 'Caveat', cursive;
+        font-size: 5vw;
+        font-weight: 400;
+        color: #706751;
+    }
+
+    #work span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 4vw;
+        font-weight: 400;
+        color: black;
+        /* letter-spacing: -2px; */
+        text-transform: uppercase;
+    }
+
+    #work .workcontent {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5vh;
+        padding: 2vw 0;
+        border-bottom: 2px solid #706751;
+    }
+
+    .page4btn {
+        margin-left: auto;
+    }
+
+    .page4btn a {
+        text-decoration: none;
+        font-size: 3vw;
+        padding: 0.7vw 4vw;
+        border: 1px solid #000000;
+        border-radius: 70px;
+        font-weight: 500;
+        color: #000;
+        background-color: #D6D1C5;
+    }
+
+    .page4btn a:hover {
+        background-color: black;
+        color: #D6D1C5;
+        transition: ease-in-out 0.3s;
+    }
+
+    .workbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    .workcontent img {
+        opacity: 0;
+        pointer-events: none;
+        height: 180%;
+        width: 15%;
+        z-index: 999;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .workcontent:hover {
+        opacity: 0.7;
+    }
+
+    #page4 .workbtn a {
+        text-decoration: none;
+        font-size: 3vw;
+        padding: 0.7vw 4vw;
+        border: 1px solid #000000;
+        border-radius: 70px;
+        font-weight: 500;
+        color: #000;
+        background-color: #D6D1C5;
+    }
+
+    #page4 .workbtn a:hover {
+        background-color: black;
+        color: #D6D1C5;
+    }
+
+    #page6 {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        line-height: 0.9;
+        padding: 0 5vw;
+        background-color: #EDA734;
+    }
+
+    #connectcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+        height: 60vh;
+        border-bottom: 2px solid #000;
+    }
+
+    #page6 #connect h1 {
+        font-family: 'Caveat', cursive;
+        font-size: 12vw;
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+        margin-top: 15vh;
+    }
+
+    #page6 #connect h2 {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 8vw;
+        font-weight: 400;
+        color: #fff;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 15vh;
+    }
+
+    #connectbtn a {
+        text-decoration: none;
+        font-size: 4.5vw;
+        padding: 1vw 5vw;
+        border: 3px solid #000000;
+        border-radius: 70px;
+        font-weight: 600;
+        color: #D6D1C5;
+        background-color: #000;
+        margin-bottom: 18vh;
+    }
+
+    #page7 {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        padding: 0 5vw;
+        background-color: #EDA734;
+    }
+
+    #social {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5vw;
+    }
+
+    #social a {
+        text-decoration: none;
+        font-size: 2.5vw;
+        padding: 1vw 4vw;
+        border: 1px solid #000000;
+        text-transform: capitalize;
+        border-radius: 70px;
+        font-weight: 500;
+        color: #000;
+    }
+}
 @media screen and (max-width: 600px) {
     #nav {
         display: flex;
-        flex-direction: column;
+        width: 100%;
+        padding: 2vw 4vw;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
     }
-
+    
+    #nav i {
+        opacity: 0;
+    }
+    
+    #home hr {
+        width: calc(100% - 100px);
+        height: 2px;
+        background-color: #706751;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
     #nav p {
+        height: inherit;
         font-size: 6vw;
+        font-weight: bold;
+        color: #706751;
+        text-align: center;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+    
+    #nav2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+    }
+    
+    #nav2 a {
+        color: #706751;
+        font-size: 2.2vw;
+        font-weight: 600;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
     }
 
     #homemain {
@@ -673,6 +1253,559 @@ hr {
 
     #homecontent {
         margin-top: 6vw;
+    }
+
+    #homemain h1 {
+        font-family: 'Caveat', cursive;
+        font-size: 5vw;
+        font-weight: 400;
+        color: #706751;
+    }
+
+    #homemain h2 {
+        font-family: 'Caveat', cursive;
+        font-size: 5vw;
+        font-weight: 400;
+        margin-left: 5vw;
+        color: #706751;
+    }
+
+    #homemain h1 span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 5vw;
+        font-weight: 500;
+        letter-spacing: -1px;
+        color: black;
+    }
+
+    #homemain h2 span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        text-transform: uppercase;
+        font-size: 5vw;
+        font-weight: 500;
+        letter-spacing: -1px;
+        color: black;
+    }
+
+    #homemain h3 {
+        margin-top: 45vh;
+        font-size: 4vw;
+        width: 90%;
+        font-weight: 100;
+        margin-left: 5vw;
+        margin-bottom: 2vw;
+        color: #706751;
+    }
+
+    #homemain .right {
+        width: 10vw;
+        object-fit: cover;
+        object-position: center;
+        opacity: 0;
+    }
+
+    #homemain .left {
+        /* background-color: red; */
+        width: 50vw;
+        height: 50vw;
+        object-fit: cover;
+        object-position: center;
+        margin-top: 30vw;
+        margin-left: 20vw;
+    }
+
+    #anda {
+        position: absolute;
+        margin-top: -30vw;
+        margin-left: 10vw;
+    }
+
+    #anda a {
+        text-decoration: none;
+        font-family: 'Caveat', cursive;
+        font-size: 2vw;
+        font-weight: 400;
+        color: #706751;
+        margin-left: 55vw;
+        border: 2px solid #706751;
+        border-radius: 50%;
+        padding: 2vw 1vw;
+        display: inline-block;
+        text-align: center;
+    }
+
+    #homemain .btn {
+        text-decoration: none;
+        font-size: 3vw;
+        padding: 1.5vw 5vw;
+        border: 1px solid #706751;
+        border-radius: 70px;
+        font-weight: 100;
+        color: #f1eeeb;
+        background-color: #000;
+    }
+
+    #homemain .btn img.btnimage {
+        opacity: 0;
+    }
+
+    #page2 {
+        flex-direction: column;
+        justify-content: center;
+        border-bottom: 1px solid #706751;
+    }
+
+    #page2 #about {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #page2 #about h1 {
+        width: 30vw;
+        font-family: 'Caveat', cursive;
+        font-size: 6vw;
+        font-weight: 400;
+        color: #706751;
+    }
+
+    #page2 #about span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6vw;
+        font-weight: 400;
+        color: black;
+        margin-top: 7vh;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    #aboutcontainer {
+        width: 100%;
+        margin-bottom: 5vw;
+        text-align: start;
+    }
+
+    #page2 #aboutcontent {
+        margin-bottom: 5vh;
+    }
+
+    #aboutcontainer #aboutcontent h1 {
+        margin: 0;
+        margin-top: 5vh;
+        font-size: 4vw;
+        font-weight: 70;
+        color: #706751;
+    }
+
+    #aboutcontainer #aboutbtn a {
+        margin-left: 0;
+        margin-top: 5vh;
+        text-decoration: none;
+        font-size: 3vw;
+        padding: 0.5vw 3vw;
+        border: 1px solid #000000;
+        border-radius: 70px;
+        font-weight: 400;
+        color: #000;
+        background-color: #D6D1C5;
+    }
+
+    #page3 {
+        display: flex;
+        flex-direction: column;
+        padding: 0 5vw;
+        height: auto;
+        border-bottom: 1px solid #706751;
+    }
+
+    #page3 #skills {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #page3 #skills h1 {
+        width: 30vw;
+        font-family: 'Caveat', cursive;
+        font-size: 6vw;
+        font-weight: 400;
+        color: #706751;
+        margin-top: 7vh;
+    }
+
+    #page3 #skills span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6vw;
+        font-weight: 400;
+        color: black;
+        margin-top: 7vh;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    #page3 #skillscontent {
+        margin: 0;
+        margin-top: 4vh;
+        margin-left: 0;
+        margin-left: 0.1vh;
+        margin-bottom: 1vh;
+        display: flex;
+        gap: 50px;
+    }
+
+    #page3 #skillscontent a {
+        margin: 0;
+        margin-right: 1vw;
+
+        width: 7vw;
+        background-color: #D6D1C5;
+        border-radius: 50%;
+    }
+
+    #page3 #skillscontent img {
+        color: #D6D1C5;
+        width: 60px;
+        height: 60px;
+        filter: saturate(3);
+    }
+
+    #page5 {
+        padding: 0 5vw;
+        margin-top: 2vh;
+        border-bottom: 1px solid #706751;
+    }
+
+    #page5 #education {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4vh;
+    }
+
+    #page5 #education h1 {
+        font-family: 'Caveat', cursive;
+        font-size: 6vw;
+        font-weight: 400;
+        color: #706751;
+        text-align: center;
+    }
+
+    #page5 #education span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6vw;
+        font-weight: 400;
+        color: black;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    .timeline {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 4vw;
+        margin-left: 15vw;
+        margin-bottom: 2vw;
+    }
+
+    .event {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2vw;
+        position: relative;
+    }
+
+    .date {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 3.8vw;
+        font-weight: 500;
+        color: #706751;
+        margin-right: 20px;
+    }
+
+    .description {
+        max-width: 500px;
+    }
+
+    .description h2 {
+        font-family: 'Caveat', cursive;
+        font-size: 5vw;
+        font-weight: 400;
+        color: #706751;
+    }
+
+    .description p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 2.9vw;
+        color: black;
+    }
+
+    #page4 {
+        padding: 0 5vw;
+    }
+
+    #page4 #projects {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #page4 #projects h1 {
+        width: 35vw;
+        font-family: 'Caveat', cursive;
+        font-size: 6vw;
+        font-weight: 400;
+        color: #706751;
+        margin-top: 7vh;
+    }
+
+    #page4 #projects span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 6vw;
+        font-weight: 400;
+        color: black;
+        margin-top: 7vh;
+        letter-spacing: -1px;
+        text-transform: uppercase;
+    }
+
+    #work {
+        display: flex;
+        margin-top: 4vh;
+    }
+
+    #work h1 {
+        font-family: 'Caveat', cursive;
+        font-size: 5vw;
+        font-weight: 400;
+        color: #706751;
+    }
+
+    #work span {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 4vw;
+        font-weight: 400;
+        color: black;
+        /* letter-spacing: -2px; */
+        text-transform: uppercase;
+    }
+
+    #work .workcontent {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5vh;
+        padding: 2vw 0;
+        border-bottom: 2px solid #706751;
+    }
+
+    .page4btn {
+        margin-left: auto;
+    }
+
+    .page4btn a {
+        text-decoration: none;
+        font-size: 3vw;
+        padding: 0.7vw 4vw;
+        border: 1px solid #000000;
+        border-radius: 70px;
+        font-weight: 500;
+        color: #000;
+        background-color: #D6D1C5;
+    }
+
+    .page4btn a:hover {
+        background-color: black;
+        color: #D6D1C5;
+        transition: ease-in-out 0.3s;
+    }
+
+    .workbtn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    .workcontent img {
+        opacity: 0;
+        pointer-events: none;
+        height: 180%;
+        width: 15%;
+        z-index: 999;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    .workcontent:hover {
+        opacity: 0.7;
+    }
+
+    #page4 .workbtn a {
+        text-decoration: none;
+        font-size: 3vw;
+        padding: 0.7vw 4vw;
+        border: 1px solid #000000;
+        border-radius: 70px;
+        font-weight: 500;
+        color: #000;
+        background-color: #D6D1C5;
+    }
+
+    #page4 .workbtn a:hover {
+        background-color: black;
+        color: #D6D1C5;
+    }
+
+    #page6 {
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        line-height: 0.9;
+        padding: 0 5vw;
+        background-color: #EDA734;
+    }
+
+    #connectcontainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5vh;
+        height: 60vh;
+        border-bottom: 2px solid #000;
+    }
+
+    #page6 #connect h1 {
+        font-family: 'Caveat', cursive;
+        font-size: 12vw;
+        font-weight: 400;
+        color: #fff;
+        text-align: center;
+        margin-top: 15vh;
+    }
+
+    #page6 #connect h2 {
+        font-family: 'Caveat', cursive;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 8vw;
+        font-weight: 400;
+        color: #fff;
+        letter-spacing: -2px;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 15vh;
+    }
+
+    #connectbtn a {
+        text-decoration: none;
+        font-size: 4.5vw;
+        padding: 1vw 5vw;
+        border: 3px solid #000000;
+        border-radius: 70px;
+        font-weight: 600;
+        color: #D6D1C5;
+        background-color: #000;
+        margin-bottom: 18vh;
+    }
+
+    #page7 {
+        display: flex;
+        flex-direction: column;
+        line-height: 1;
+        padding: 0 5vw;
+        background-color: #EDA734;
+    }
+
+    #social {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 5vw;
+    }
+
+    #social a {
+        text-decoration: none;
+        font-size: 2.5vw;
+        padding: 1vw 4vw;
+        border: 1px solid #000000;
+        text-transform: capitalize;
+        border-radius: 70px;
+        font-weight: 500;
+        color: #000;
+    }
+}
+@media screen and (max-width: 500px) {
+    #nav {
+        display: flex;
+        width: 100%;
+        padding: 2vw 4vw;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #nav i {
+        opacity: 0;
+    }
+    
+    #home hr {
+        width: calc(100% - 100px);
+        height: 2px;
+        background-color: #706751;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 10px;
+    }
+    
+    #nav p {
+        height: inherit;
+        font-size: 6vw;
+        font-weight: bold;
+        color: #706751;
+        text-align: center;
+        margin-top: 10px;
+        text-transform: uppercase;
+    }
+    
+    #nav2 {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 50px;
+    }
+    
+    #nav2 a {
+        color: #706751;
+        font-size: 2.2vw;
+        font-weight: 600;
+        position: relative;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+
+    #homemain {
+        position: relative;
+        padding: 0 5vw;
+        border-bottom: 1px solid #706751;
+    }
+
+    #homecontent {
+        margin-top: 10vw;
     }
 
     #homemain h1 {
@@ -759,8 +1892,8 @@ hr {
 
     #homemain .btn {
         text-decoration: none;
-        font-size: 2vw;
-        padding: 10px 4vw;
+        font-size: 3vw;
+        padding: 1.5vw 5vw;
         border: 1px solid #706751;
         border-radius: 70px;
         font-weight: 100;
