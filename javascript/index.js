@@ -23,7 +23,15 @@ tl.to("#home", {
 // Initialize Locomotive Scroll
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
-    smooth: true
+    smooth: true,
+    mobile: {
+        breakpoint: 0,
+        smooth: true,
+    },
+    tablet: {
+        breakpoint: 0,
+        smooth: true,
+    },
 });
 
 // Attach smooth scroll to navigation links with data-scroll-to attribute
