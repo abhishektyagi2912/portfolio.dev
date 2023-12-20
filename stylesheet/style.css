@@ -624,3 +624,33 @@ hr {
     font-weight: 600;
     color: #000;
 }
+
+.cover {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -100vw;
+    z-index: 1000;
+}
+
+.transition.slide .cover1 {
+    background-color: #a1936f;
+    animation: slide 0.3s ease-in-out forwards;
+}
+
+.transition.slide .cover2 {
+    background-color: #D6D1C5;
+    animation: slide 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes slide {
+    from {
+        left: -100vw;
+    }
+
+    to {
+        left: 0;
+    }
+}

@@ -137,3 +137,13 @@ function isOverPage4Btn(details, elem) {
 function sendEmail() {
     window.location.href = "mailto:your-abhishekpersonal2912@gmail.com?subject=I%20want%20to%20work%20with%20you";
 }
+
+const link = document.querySelector(".link");
+const transition = document.querySelector(".transition");
+link.addEventListener("click", (e) => {
+    e.preventDefault();
+    transition.classList.add("slide"); // Use the correct class name "slide" here
+    setTimeout(() => {
+        window.location = link.href;
+    }, 900);
+});
