@@ -17,7 +17,7 @@ function updateDateTime() {
         day: 'numeric',
         hour: 'numeric',
         minute: 'numeric',
-        hour12: false, 
+        hour12: false,
         timeZone: 'Asia/Kolkata',
     };
     const formattedDate = new Intl.DateTimeFormat('en-US', options).format(currentDate);
@@ -27,3 +27,17 @@ function updateDateTime() {
 updateDateTime();
 
 setInterval(updateDateTime, 1000);
+
+const links = document.querySelectorAll(".link");
+const transition = document.querySelector(".transition");
+
+links.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+        transition.classList.add("slide");
+
+        setTimeout(() => {
+            window.location = link.href;
+        }, 900);
+    });
+});

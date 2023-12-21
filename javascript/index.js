@@ -142,10 +142,6 @@ function isOverPage4Btn(details, elem) {
     return isMouseOverElement(details, page4Btn);
 }
 
-function sendEmail() {
-    window.location.href = "mailto:your-abhishekpersonal2912@gmail.com?subject=I%20want%20to%20work%20with%20you";
-}
-
 const links = document.querySelectorAll(".link");
 const transition = document.querySelector(".transition");
 

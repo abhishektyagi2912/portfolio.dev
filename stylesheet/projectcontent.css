@@ -24,7 +24,7 @@ body {
 #home {
     background-color: #D6D1C5;
     width: 100%;
-    border-bottom: 1px solid #706751;
+    margin-top: 6vh;
 }
 
 #home h1 {
@@ -41,6 +41,34 @@ body {
     color: #000;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    text-align: start;
+    margin-bottom: 2vh;
+    padding-top: 2vw;
+    padding-bottom: 2vw;
+    border-bottom: 1px solid #706751;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #706751;
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding: 0 1vw;
+}
+
+#right a {
+    text-decoration: none;
+    color: #706751;
+    font-size: 1.6vw;
+    font-weight: 500;
+    padding: 0 1vw;
+
+}
+
 #imagecontainier img {
     width: 70vw;
     height: 40vw;
@@ -55,7 +83,6 @@ body {
     background-color: #D6D1C5;
     width: 100%;
     margin-top: 5vw;
-
     border-bottom: 1px solid #706751;
 }
 
@@ -167,7 +194,7 @@ body {
     margin-top: 2vw
 }
 
-#footer .fcontent h1{
+#footer .fcontent h1 {
     font-size: 1.5vw;
     color: #333;
 }
@@ -175,4 +202,34 @@ body {
 #footer #time {
     font-size: 1.5vw;
     color: #333;
+}
+
+.cover {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: -100vw;
+    z-index: 1000;
+}
+
+.transition.slide .cover1 {
+    background-color: #a1936f;
+    animation: slide 0.3s ease-in-out forwards;
+}
+
+.transition.slide .cover2 {
+    background-color: #D6D1C5;
+    animation: slide 0.3s ease-in-out forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes slide {
+    from {
+        left: -100vw;
+    }
+
+    to {
+        left: 0;
+    }
 }
