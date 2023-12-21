@@ -1,6 +1,8 @@
 Shery.mouseFollower();
 Shery.makeMagnet(".magnet");
 
+
+// loaing animation
 var tl = gsap.timeline()
 
 tl.to("#home", {
@@ -55,10 +57,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 duration: 1,
                 scrollTo: {
                     y: targetElement,
-                    offsetY: 50, // Adjust this offset based on your layout
+                    offsetY: 50, // Adjust this offset based on layout
                 },
                 onComplete: () => {
-                    scroll.update(); // Update Locomotive Scroll after smooth scroll
+                    scroll.update(); 
                 },
             });
         }
@@ -88,6 +90,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+// image animation
 
 document.querySelectorAll(".workcontent").forEach(function (elem) {
     var rotate = 0;
@@ -142,6 +146,7 @@ function isOverPage4Btn(details, elem) {
     return isMouseOverElement(details, page4Btn);
 }
 
+// page animation
 const links = document.querySelectorAll(".link");
 const transition = document.querySelector(".transition");
 

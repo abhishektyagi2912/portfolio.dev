@@ -4,8 +4,18 @@ Shery.makeMagnet(".magnet");
 // Initialize Locomotive Scroll
 const scroll = new LocomotiveScroll({
     el: document.querySelector('#main'),
-    smooth: true
+    smooth: true,
+    mobile: {
+        breakpoint: 0,
+        smooth: true,
+    },
+    tablet: {
+        breakpoint: 0,
+        smooth: true,
+    },
 });
+
+// time finder and set to the html 
 
 function updateDateTime() {
     const timeElement = document.getElementById("time");
@@ -28,6 +38,8 @@ updateDateTime();
 
 setInterval(updateDateTime, 1000);
 
+
+// page transition
 const links = document.querySelectorAll(".link");
 const transition = document.querySelector(".transition");
 
