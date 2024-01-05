@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     setupSmoothScroll();
 
     window.addEventListener('popstate', function (event) {
-        // Reapply smooth scroll setup
+        // Reapply smooth scroll setup when navigating back
         setupSmoothScroll();
     });
 
@@ -78,13 +78,17 @@ document.addEventListener('DOMContentLoaded', function () {
                         offsetY: 50, // Adjust this offset based on layout
                     },
                     onComplete: () => {
-                        scroll.update();
+                        // If using Locomotive Scroll, update after smooth scroll
+                        if (typeof scroll !== 'undefined') {
+                            scroll.update();
+                        }
                     },
                 });
             }
         }
     }
 });
+
 
 
 // document.addEventListener('DOMContentLoaded', function () {
