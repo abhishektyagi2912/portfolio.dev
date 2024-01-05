@@ -56,8 +56,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Check if the main page is being loaded
         if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-            // Force reload and clear the cache
+            // Force reload and attempt to clear the cache
             location.reload(true);
+
+            // Fallback for older browsers
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations().then(function(registrations) {
+                    for(let registration of registrations) {
+                        registration.unregister();
+                    }
+                });
+            }
         }
     });
 
