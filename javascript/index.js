@@ -53,6 +53,12 @@ document.addEventListener('DOMContentLoaded', function () {
     window.addEventListener('popstate', function (event) {
         // Reapply smooth scroll setup when navigating back
         setupSmoothScroll();
+
+        // Check if the main page is being loaded
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            // Force reload and clear the cache
+            location.reload(true);
+        }
     });
 
     function setupSmoothScroll() {
