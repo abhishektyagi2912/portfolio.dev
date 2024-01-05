@@ -36,60 +36,81 @@ const scroll = new LocomotiveScroll({
     },
 });
 
+// window.addEventListener('pageshow', function (event) {
+//     if (event.persisted) {
+//         // Page is loaded from back/forward cache
+//         scroll.update();
+//     } else {
+//         // Page is fully reloaded
+//         location.reload();
+//     }
+// });
+
 // Attach smooth scroll to navigation links with data-scroll-to attribute
 document.addEventListener('DOMContentLoaded', function () {
-    document.querySelectorAll('[data-scroll-to]').forEach(function (link) {
-        link.addEventListener('click', function (e) {
-            var targetId = this.getAttribute('href');
+    setupSmoothScroll();
 
-            if (targetId.charAt(0) === '#') {
-                e.preventDefault();
-                smoothScroll(targetId);
-            }
-        });
+    window.addEventListener('pageshow', function (event) {
+        if (!event.persisted) {
+            setupSmoothScroll();
+        }
     });
 
-    function smoothScroll(targetId) {
-        const targetElement = document.querySelector(targetId);
+    function setupSmoothScroll() {
+        document.querySelectorAll('[data-scroll-to]').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                var targetId = this.getAttribute('href');
 
-        if (targetElement) {
-            gsap.to(window, {
-                duration: 1,
-                scrollTo: {
-                    y: targetElement,
-                    offsetY: 50, // Adjust this offset based on layout
-                },
-                onComplete: () => {
-                    scroll.update(); 
-                },
+                if (targetId.charAt(0) === '#') {
+                    e.preventDefault();
+                    smoothScroll(targetId);
+                }
             });
+        });
+
+        function smoothScroll(targetId) {
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                gsap.to(window, {
+                    duration: 1,
+                    scrollTo: {
+                        y: targetElement,
+                        offsetY: 50, // Adjust this offset based on layout
+                    },
+                    onComplete: () => {
+                        scroll.update();
+                    },
+                });
+            }
         }
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    const scrollToTopButton = document.getElementById('scroll-to-top');
 
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 100) {
-            scrollToTopButton.style.opacity = '1';
-            scrollToTopButton.style.pointerEvents = 'auto';
-        } else {
-            scrollToTopButton.style.opacity = '0';
-            scrollToTopButton.style.pointerEvents = 'none';
-        }
-    });
+// document.addEventListener('DOMContentLoaded', function () {
+//     const scrollToTopButton = document.getElementById('scroll-to-top');
 
-    scrollToTopButton.addEventListener('click', function () {
-        gsap.to(window, {
-            duration: 1,
-            scrollTo: {
-                y: '#home',
-                offsetY: 0,
-            },
-        });
-    });
-});
+//     window.addEventListener('scroll', function () {
+//         if (window.scrollY > 100) {
+//             scrollToTopButton.style.opacity = '1';
+//             scrollToTopButton.style.pointerEvents = 'auto';
+//         } else {
+//             scrollToTopButton.style.opacity = '0';
+//             scrollToTopButton.style.pointerEvents = 'none';
+//         }
+//     });
+
+//     scrollToTopButton.addEventListener('click', function () {
+//         gsap.to(window, {
+//             duration: 1,
+//             scrollTo: {
+//                 y: '#home',
+//                 offsetY: 0,
+//             },
+//         });
+//     });
+// });
 
 // image animation
 
