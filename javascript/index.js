@@ -50,10 +50,9 @@ const scroll = new LocomotiveScroll({
 document.addEventListener('DOMContentLoaded', function () {
     setupSmoothScroll();
 
-    window.addEventListener('pageshow', function (event) {
-        if (!event.persisted) {
-            setupSmoothScroll();
-        }
+    window.addEventListener('popstate', function (event) {
+        // Reapply smooth scroll setup
+        setupSmoothScroll();
     });
 
     function setupSmoothScroll() {
